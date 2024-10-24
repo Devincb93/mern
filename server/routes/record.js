@@ -3,7 +3,7 @@ import express from 'express'
 import db from "../db/connection.js"
 
 import { ObjectId } from 'mongodb'
-import { MdCollections } from 'react-icons/md'
+
 
 const router = express.Router()
 
@@ -22,7 +22,7 @@ router.get("/:id", async(req, res) =>{
     else res.send(result.status(200))
 })
 
-router.post("/", async(res, res) => {
+router.post("/", async(req, res) => {
     try {
         let newDocument = {
             name: req.body.name,
